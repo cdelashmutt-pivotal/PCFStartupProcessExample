@@ -1,0 +1,23 @@
+{
+  "batchcomplete": "",
+  "continue": {
+    "rccontinue": "20170707160048|960444522",
+    "continue": "-||"
+  },
+  "query": {
+    "recentchanges": [
+      {
+        "type": "edit",
+        "ns": 0,
+        "title": "THIS IS A PLACEHOLDER!!!",
+        "pageid": -1,
+        "revid": -1,
+        "old_revid": -1,
+        "rcid": -1,
+        "user": "FakeUser",
+        "oldlen": -1,
+        "newlen": -1
+      }
+    ]
+  }
+}

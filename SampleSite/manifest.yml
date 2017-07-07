@@ -1,0 +1,7 @@
+﻿---
+applications:
+- name: startup-example
+  memory: 256M
+  buildpack: binary_buildpack
+  stack: windows2012R2
+  command: startup-pre-v1.10.bat
