@@ -79,7 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="startup-pre-v1.1.0.bat">
+    <None Include="startup-pre-v1.10.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="startup.bat">
@@ -101,8 +101,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)publish
-copy $(TargetDir)startup.bat $(SolutionDir)publish</PostBuildEvent>
+    <PostBuildEvent>if not exist "$(SolutionDir)publish" mkdir $(SolutionDir)publish
+copy $(TargetPath) $(SolutionDir)publish
+copy $(TargetDir)startup.bat $(SolutionDir)publish
+copy $(TargetDir)startup-pre-v1.10.bat $(SolutionDir)publish</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
